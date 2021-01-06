@@ -17,6 +17,7 @@
 		24710FFA25A2EF4700B09D5E /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710FF925A2EF4700B09D5E /* QuizAppUITests.swift */; };
 		24B7330625A302F500A727B5 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B7330525A302F500A727B5 /* QuizViewController.swift */; };
 		24B7330B25A303FD00A727B5 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B7330A25A303FD00A727B5 /* ScoreViewController.swift */; };
+		24D2791B25A5BA3F0078BB06 /* quiz.csv in Resources */ = {isa = PBXBuildFile; fileRef = 24D2791A25A5BA3F0078BB06 /* quiz.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		24710FFB25A2EF4700B09D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B7330525A302F500A727B5 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		24B7330A25A303FD00A727B5 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		24D2791A25A5BA3F0078BB06 /* quiz.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = quiz.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +108,13 @@
 				24710FD725A2EF4600B09D5E /* AppDelegate.swift */,
 				24710FD925A2EF4600B09D5E /* SceneDelegate.swift */,
 				24710FDB25A2EF4600B09D5E /* ViewController.swift */,
-				24710FDD25A2EF4600B09D5E /* Main.storyboard */,
 				24B7330A25A303FD00A727B5 /* ScoreViewController.swift */,
 				24B7330525A302F500A727B5 /* QuizViewController.swift */,
+				24710FDD25A2EF4600B09D5E /* Main.storyboard */,
 				24710FE025A2EF4700B09D5E /* Assets.xcassets */,
 				24710FE225A2EF4700B09D5E /* LaunchScreen.storyboard */,
 				24710FE525A2EF4700B09D5E /* Info.plist */,
+				24D2791A25A5BA3F0078BB06 /* quiz.csv */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				24710FE425A2EF4700B09D5E /* LaunchScreen.storyboard in Resources */,
 				24710FE125A2EF4700B09D5E /* Assets.xcassets in Resources */,
 				24710FDF25A2EF4600B09D5E /* Main.storyboard in Resources */,
+				24D2791B25A5BA3F0078BB06 /* quiz.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
