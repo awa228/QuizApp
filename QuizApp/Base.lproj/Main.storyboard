@@ -101,6 +101,10 @@
                                     <action selector="btnActionWithSender:" destination="rNo-La-Qid" eventType="touchUpInside" id="wMZ-Oy-y0G"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-nO-oQL">
+                                <rect key="frame" x="8" y="92" width="374" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SYK-6l-fr1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,6 +114,7 @@
                         <outlet property="answerButton2" destination="AHe-TD-mKW" id="KfL-ZN-AvH"/>
                         <outlet property="answerButton3" destination="yiY-dO-RTg" id="ITL-pK-NYD"/>
                         <outlet property="answerButton4" destination="k5l-c2-YFZ" id="HCn-Jm-WxW"/>
+                        <outlet property="judgeImageView" destination="Snx-nO-oQL" id="zA2-fR-kus"/>
                         <outlet property="quizNumberLabel" destination="07M-DH-SpN" id="Djv-Az-Iak"/>
                         <outlet property="quizTextView" destination="iGv-Ow-NNS" id="Y9E-dw-s3y"/>
                         <segue destination="ND6-pr-KGz" kind="presentation" identifier="toScoreVC" id="nXP-aq-lWe"/>
@@ -132,9 +137,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="トップへ戻る"/>
+                                <connections>
+                                    <action selector="toTouButtonAction:" destination="ND6-pr-KGz" eventType="touchUpInside" id="Cfh-HV-g3Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUF-86-h2L">
-                                <rect key="frame" x="123" y="93" width="144" height="104"/>
+                                <rect key="frame" x="0.0" y="93" width="390" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -144,10 +152,13 @@
                         <viewLayoutGuide key="safeArea" id="jvw-Dm-Ql7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="SUF-86-h2L" id="xvd-2W-qG4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBU-ZL-Gd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1453.6231884057972" y="93.75"/>
+            <point key="canvasLocation" x="1450.7692307692307" y="93.127962085308056"/>
         </scene>
     </scenes>
     <resources>
