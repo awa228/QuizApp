@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //枠線の太さ
+        startButton.layer.borderWidth = 1
+        //枠線の色
+        startButton.layer.borderColor = UIColor.black.cgColor
+        
+        
     }
 
 

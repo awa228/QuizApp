@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class QuizViewController: UIViewController {
     
@@ -17,16 +18,20 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var answerButton4: UIButton!
     @IBOutlet weak var judgeImageView: UIImageView!
     
+    var bannerView: GADBannerView!
+    
     
     var csvArray: [String] = []
     var quizArray: [String] = []
     var quizCount = 0
     var correctCount = 0
+    var selectLevel = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        csvArray = loadCSV(fileName: "quiz")
+        csvArray = loadCSV(fileName: "quiz\(selectLevel)")
+        csvArray.shuffle()
         print(csvArray)
         
         quizArray = csvArray[quizCount].components(separatedBy: ",")
@@ -37,6 +42,27 @@ class QuizViewController: UIViewController {
         answerButton2.setTitle(quizArray[3], for: .normal)
         answerButton3.setTitle(quizArray[4], for: .normal)
         answerButton4.setTitle(quizArray[5], for: .normal)
+        print ("選択したレベルは\(selectLevel)です")
+        
+        answerButton1.layer.borderWidth = 1
+        answerButton1.layer.borderColor = UIColor.black.cgColor
+        
+        answerButton2.layer.borderWidth = 1
+        answerButton2.layer.borderColor = UIColor.black.cgColor
+        
+        answerButton3.layer.borderWidth = 1
+        answerButton3.layer.borderColor = UIColor.black.cgColor
+        
+        answerButton4.layer.borderWidth = 1
+        answerButton4.layer.borderColor = UIColor.black.cgColor
+
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        addBannerViewToView(bannerView)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,8 +127,26 @@ class QuizViewController: UIViewController {
         return csvArray
     }
     
-    
-    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                    attribute: .bottom,
+                    relatedBy: .equal,
+                    toItem: view.safeAreaLayoutGuide,
+                    attribute: .bottom,
+                    multiplier: 1,
+                    constant: 0),
+         NSLayoutConstraint(item: bannerView,
+                    attribute: .centerX,
+                    relatedBy: .equal,
+                    toItem: view,
+                    attribute: .centerX,
+                    multiplier: 1,
+                    constant: 0)
+        ])
+    }
     
     
     
